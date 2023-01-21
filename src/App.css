@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+:root {
+  --darker: #3c3c3c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-image: url("./bg.png");
+  background-size: cover;
+  font-size: 20px;
+  font-family: "Garet";
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+
   align-items: center;
+  flex-direction: column;
+  border: 1px solid #3c3c3c;
+  height: 400px;
+  box-shadow: 5px 5px inset;
+}
+
+.todo-head {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.input-text {
+  background-color: var(--darker);
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+
+  font-size: 1.25rem;
+  margin-right: 20px;
+  color:beige;
+  font-family: 'Garet';
+}
+
+.list {
   color: white;
+  margin-left: -60px;
+  line-height: 50px;
+  font-size: 1.5rem;
+}
+ul {
+  list-style-type: none;
+}
+.add-btn {
+  padding: 7px;
+  font-family: "Garet";
+  font-size: medium;
+  border-radius: 8px;
+  /* border: 2px solid; */
+  background-color: #3a3b3c;
+  color: #e1e1d9;
+  /* box-shadow: 1px 1px inset; */
+  border:none;
+  margin-right:10px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-btn:hover {
+  cursor: pointer;
+  background-color: beige;
+  color: black;
+}
+.delete-btn {
+  margin-left: 12px;
+  /* background-color: #3a3b3c; */
+  /* color: white; */
+  /* border:1px solid; */
+  border-radius: 5px;
+  background-color: #3a3b3c;
+  /* box-shadow: 0.3px 0.3px inset; */
+  color: #e1e1d9;
+  font-family: "Garet";
+  border: none;
+}
+.delete-btn:hover {
+  background-color: beige;
+  cursor: pointer;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkbox {
+  margin-right: 7px;
+}
+.completed{
+  background-color:green;
+}
+
+.notcompleted{
+  color:white;
+}
+
+.quotes{
+  color:white;
+  font-size: 0.8rem;
+  display: flex;
+  margin-left:200px;
+  margin-bottom: 20px;
+  margin-top:-20px;
 }
